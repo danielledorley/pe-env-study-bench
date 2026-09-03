@@ -1,0 +1,37 @@
+PE Environmental Study App — full content upgrade validation
+
+Updated resources:
+- data/problems.json: 178 problems total (148 original IDs upgraded + 30 new mixed-topic problems)
+- data/flashcards.json: 298 cards total (228 original + 70 new recognition/unit/compare/trap/formula-recognition cards)
+- data/guide.json: all 8 topic guides expanded with recognition cues, formula-use sheet, traps, comparisons, mixed-practice strategy, and miss classification guidance
+- app.js: added Mixed PE mode and incorrect-answer miss classification with progress summary
+
+Structural checks
+- All JSON files parse successfully.
+- All 178 problem IDs are unique; the original 148 IDs are preserved.
+- Every problem has concept, steps, shortcut, and gotcha.
+- Every choice set is unique and every answerIndex is valid.
+- Existing SVG diagram remains well-formed.
+- Mixed problems use topic='mixed' and are available through the dedicated Mixed PE filter.
+- Mixed question/concept fields do not name the solution formula/law/equation.
+- app.js passes Node syntax validation.
+
+Numeric verification
+- The original verification script independently recomputes the 147 quantitative original problems.
+- 1 original problem is conceptual-only.
+- All 147 original recomputed answers match their selected choices within 3%.
+- Mixed set numeric answers were independently checked during final validation; conceptual mixed questions were checked structurally.
+
+Content additions
+- Problem-recognition cues
+- Formula sheet organized by when to use / inputs / output / trap
+- PE traps section
+- Compare/contrast boundaries
+- 30 mixed-topic recognition problems, 8 easy / 12 medium / 10 hard
+- Flashcards for recognition, units/constants, comparisons, traps, and formula recognition
+- Alkalinity card clarified to include hydroxide/bicarbonate/carbonate context
+- Miss classification: concept, method, units, arithmetic, misread, setup, careless
+
+Source corrections retained from prior upgrade
+- b-gas-m2 corrected to 694 mg.
+- b-gas-h1 corrected to 61.5 L and fits the 65 L capacity.

@@ -1,0 +1,3 @@
+Quantitative problems independently recomputed: 147
+Conceptual-only problems: 1
+All recomputed numeric answers match their selected choices within 3%.
