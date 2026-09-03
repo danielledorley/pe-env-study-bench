@@ -364,6 +364,65 @@ main#app {
 }
 .guide-back-btn { margin-bottom: 18px; }
 
+/* Difficulty chips */
+.chip.difficulty { text-transform: capitalize; }
+.chip.difficulty.easy.active { background: var(--good); border-color: var(--good); }
+.chip.difficulty.medium.active { background: #B8763E; border-color: #B8763E; }
+.chip.difficulty.hard.active { background: var(--bad); border-color: var(--bad); }
+.filter-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; margin-bottom: 18px; }
+.filter-group-label { font-family: var(--mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: #8A8265; display: block; margin-bottom: 6px; }
+
+.hint-box {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: rgba(184,118,62,0.10);
+  border: 1px dashed #B8763E;
+  border-radius: 7px;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: #7A5228;
+}
+
+/* Progress dashboard */
+.progress-summary-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 24px; }
+.progress-stat {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+.progress-stat .value { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: var(--slate-2); }
+.progress-stat .label { font-family: var(--mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; color: #8A8265; margin-top: 4px; }
+
+.progress-topic-row {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent, var(--slate-2));
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.progress-topic-row .row.between { margin-bottom: 8px; }
+.progress-topic-row h4 { font-family: var(--serif); margin: 0; font-size: 1rem; }
+.progress-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.progress-bar-row .label { font-family: var(--mono); font-size: 0.68rem; width: 90px; flex-shrink: 0; color: #5C6B5E; }
+.progress-bar-row .progress-bar { flex: 1; margin-bottom: 0; }
+.progress-bar-row .pct { font-family: var(--mono); font-size: 0.7rem; width: 70px; text-align: right; flex-shrink: 0; color: #5C6B5E; }
+
+.recommendation-card {
+  background: rgba(168,67,61,0.08);
+  border: 1px solid rgba(168,67,61,0.3);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+.recommendation-card.good {
+  background: rgba(92,124,91,0.08);
+  border-color: rgba(92,124,91,0.3);
+}
+
 @media (max-width: 520px) {
   .brand-sub { display: none; }
   .flashcard { padding: 20px; min-height: 200px; }
